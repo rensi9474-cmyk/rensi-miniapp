@@ -1,0 +1,26 @@
+<h2>Pilih Emoji</h2>
+
+<div id="list"></div>
+
+<script type="module">
+import { categories } from "./scripts/data.js";
+
+const list = document.getElementById("list");
+
+categories.emoji.forEach(item => {
+  const card = document.createElement("div");
+  card.className = "item-card";
+
+  card.innerHTML = `
+    <lottie-player src="${item.file}" autoplay loop></lottie-player>
+    <p>${item.name}</p>
+    <button onclick="selectItem('${item.file}')">Pilih</button>
+  `;
+
+  list.appendChild(card);
+});
+
+window.selectItem = (file) => {
+  window.location.href = /cart.html?file=${encodeURIComponent(file)};
+};
+</script>
