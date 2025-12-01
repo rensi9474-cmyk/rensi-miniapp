@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rensi MiniApp</title>
 
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: white;
+      padding: 20px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 10px;
+      background: #222;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Rensi Mini App</h2>
+
+  <a class="btn">Character Emoji</a>
+  <a class="btn">Special Effect</a>
+  <a class="btn">Only 10K</a>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+  </script>
+</body>
+</html>
